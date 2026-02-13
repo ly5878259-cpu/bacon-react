@@ -10,7 +10,7 @@ export default function ReactPage() {
     const url = params.get("url");
 
     async function run() {
-      const res = await fetch(`https://zamxzyhost.my.id/api/Bypass?url=${encodeURIComponent(url)}`);
+      const res = await fetch(`https://bypassapi.vercel.app/api/Bypass?url=${encodeURIComponent(url)}`);
       const data = await res.text();
 
       await fetch("/api/save", {
@@ -61,3 +61,4 @@ export default function ReactPage() {
     </div>
   );
 }
+
