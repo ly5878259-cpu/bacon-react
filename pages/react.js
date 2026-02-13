@@ -19,15 +19,16 @@ export default function ReactPage() {
       });
 
       let t = 10;
-      const interval = setInterval(() => {
-        t--;
-        setSeconds(t);
-        if (t <= 0) {
-          clearInterval(interval);
-          setResult(data);
-          setDone(true);
-        }
-      }, 1000);
+const interval = setInterval(() => {
+  t--;
+  setSeconds(t);
+  if (t <= 0) {
+    clearInterval(interval);
+
+    // 🔥 THIS IS THE IMPORTANT PART
+    window.location.href = data;
+  }
+}, 1000);
     }
 
     run();
